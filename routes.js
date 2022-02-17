@@ -11,9 +11,9 @@ export const routes = (app) => {
         .get(getTest)
 
     app.route('/api/cart')
-        .get( getCart)
-        .post( addToCart)
-        .delete( removeFromCart)
+        .get(getCart)
+        .post(addToCart)
+        .delete(removeFromCart)
 
     app.route('/api/cart/clear')
         .delete(clearCart)
@@ -23,9 +23,8 @@ export const routes = (app) => {
         .post(addUser)
 
     app.route('/api/login/validate')
-        .post(validateCredentials)   
+        .post(validateCredentials)  
 }
-
 
 const checkToken = express.Router();  
 checkToken.use((req, res, next) => {
